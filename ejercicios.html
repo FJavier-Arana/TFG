@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ejercicios | IRONFORGE</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        IRON<span>FORGE</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            ← Volver
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="exercises-page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="section-tag">
+                EXERCISES
+            </span>
+
+            <h1 id="page-title">
+                EJERCICIOS
+            </h1>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="tools">
+
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Buscar ejercicio..."
+            >
+
+        </div>
+
+
+        <select id="equipmentFilter">
+
+            <option value="">
+                Todo el equipamiento
+            </option>
+
+        </select>
+
+
+    </div>
+
+
+
+    <div
+        id="exercise-count"
+        class="exercise-count"
+    ></div>
+
+
+
+    <div
+        id="exercises"
+        class="exercise-grid"
+    >
+
+        <div class="loading">
+            Cargando ejercicios...
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<script src="js/api.js"></script>
+<script src="js/ejercicios.js"></script>
+
+</body>
+</html>

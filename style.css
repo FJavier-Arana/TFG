@@ -1,0 +1,1180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --yellow: #ffd400;
+    --yellow-light: #ffe45c;
+
+    --black: #080808;
+    --black-2: #101010;
+    --black-3: #171717;
+
+    --border: #292929;
+
+    --white: #ffffff;
+    --gray: #999;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1d1d1d 0,
+            var(--black) 40%
+        );
+
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+.navbar {
+
+    height: 80px;
+
+    padding:
+        0 6%;
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    background:
+        rgba(8, 8, 8, .95);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.logo {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 950;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--yellow);
+
+}
+
+
+.navbar nav a {
+
+    color: #bbb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: .2s;
+
+}
+
+
+.navbar nav a:hover {
+
+    color:
+        var(--yellow);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+    min-height:
+        620px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        80px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -150px;
+
+    top: 50px;
+
+    border-radius: 50%;
+
+    background:
+        var(--yellow);
+
+    opacity: .08;
+
+    filter:
+        blur(80px);
+
+}
+
+
+.hero-content {
+
+    max-width:
+        750px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-tag,
+.section-tag {
+
+    color:
+        var(--yellow);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(55px, 9vw, 110px);
+
+    line-height:
+        .88;
+
+    margin:
+        20px 0 30px;
+
+    letter-spacing:
+        -5px;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--yellow);
+
+}
+
+
+.hero p {
+
+    max-width:
+        550px;
+
+    color:
+        #aaa;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.hero-button {
+
+    display:
+        inline-block;
+
+    background:
+        var(--yellow);
+
+    color:
+        #000;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        950;
+
+    padding:
+        16px 30px;
+
+    border-radius:
+        6px;
+
+    transition:
+        .2s;
+
+}
+
+
+.hero-button:hover {
+
+    background:
+        var(--yellow-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+
+main {
+
+    width:
+        88%;
+
+    max-width:
+        1400px;
+
+    margin:
+        auto;
+
+    padding:
+        70px 0;
+
+}
+
+
+.section-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.section-header h2,
+.page-heading h1 {
+
+    font-size:
+        clamp(32px, 5vw, 55px);
+
+    margin-top:
+        8px;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+/* =========================
+   MUSCLE CARDS
+========================= */
+
+
+.muscle-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(250px, 1fr)
+        );
+
+    gap:
+        22px;
+
+}
+
+
+.muscle-card {
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    transition:
+        .25s;
+
+}
+
+
+.muscle-card:hover {
+
+    border-color:
+        var(--yellow);
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255, 212, 0, .12);
+
+}
+
+
+.muscle-image {
+
+    height:
+        260px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+
+.muscle-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        .4s;
+
+}
+
+
+.muscle-card:hover
+.muscle-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.image-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0,0,0,.7)
+        );
+
+}
+
+
+.muscle-info {
+
+    padding:
+        20px;
+
+}
+
+
+.muscle-info span {
+
+    font-size:
+        10px;
+
+    color:
+        var(--yellow);
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.muscle-info h3 {
+
+    font-size:
+        25px;
+
+    margin:
+        8px 0 20px;
+
+}
+
+
+.card-button,
+.details-button {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        13px 15px;
+
+    background:
+        var(--yellow);
+
+    color:
+        #000;
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        950;
+
+    border-radius:
+        5px;
+
+}
+
+
+.card-button strong,
+.details-button strong {
+
+    font-size:
+        18px;
+
+}
+
+
+/* =========================
+   EXERCISES
+========================= */
+
+
+.exercises-page {
+
+    padding-top:
+        60px;
+
+}
+
+
+.page-heading {
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.tools {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.search-box {
+
+    flex:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        7px;
+
+    padding:
+        0 15px;
+
+}
+
+
+.search-box span {
+
+    color:
+        var(--yellow);
+
+    font-size:
+        25px;
+
+}
+
+
+.search-box input {
+
+    width:
+        100%;
+
+    height:
+        50px;
+
+    border:
+        none;
+
+    outline:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+}
+
+
+.tools select {
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid var(--border);
+
+    color:
+        white;
+
+    padding:
+        0 15px;
+
+    border-radius:
+        7px;
+
+    outline:
+        none;
+
+}
+
+
+.exercise-count {
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.exercise-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(260px, 1fr)
+        );
+
+    gap:
+        20px;
+
+}
+
+
+.exercise-card {
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    overflow:
+        hidden;
+
+    transition:
+        .25s;
+
+}
+
+
+.exercise-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--yellow);
+
+}
+
+
+.exercise-image {
+
+    height:
+        260px;
+
+    background:
+        #222;
+
+}
+
+
+.exercise-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.exercise-info {
+
+    padding:
+        18px;
+
+}
+
+
+.exercise-type {
+
+    color:
+        var(--yellow);
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.exercise-info h3 {
+
+    font-size:
+        20px;
+
+    margin:
+        9px 0;
+
+}
+
+
+.exercise-meta {
+
+    color:
+        #777;
+
+    min-height:
+        40px;
+
+    font-size:
+        13px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+/* =========================
+   DETAIL
+========================= */
+
+
+.detail {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        60px;
+
+    align-items:
+        start;
+
+}
+
+
+.detail-media {
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.detail-media img {
+
+    width:
+        100%;
+
+    display:
+        block;
+
+}
+
+
+.detail-content {
+
+    padding-top:
+        10px;
+
+}
+
+
+.detail-content h1 {
+
+    font-size:
+        clamp(40px, 5vw, 70px);
+
+    line-height:
+        .95;
+
+    margin:
+        15px 0 25px;
+
+}
+
+
+.detail-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.detail-tags span {
+
+    background:
+        #1c1c1c;
+
+    border:
+        1px solid #303030;
+
+    color:
+        #ccc;
+
+    padding:
+        8px 12px;
+
+    border-radius:
+        4px;
+
+    font-size:
+        12px;
+
+}
+
+
+.detail-content section {
+
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        25px 0;
+
+}
+
+
+.detail-content section h2 {
+
+    font-size:
+        17px;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--yellow);
+
+}
+
+
+.detail-content section p {
+
+    color:
+        #aaa;
+
+    line-height:
+        1.7;
+
+}
+
+
+.instructions {
+
+    list-style:
+        none;
+
+    counter-reset:
+        steps;
+
+}
+
+
+.instructions li {
+
+    counter-increment:
+        steps;
+
+    color:
+        #bbb;
+
+    line-height:
+        1.6;
+
+    padding:
+        12px 0 12px 45px;
+
+    position:
+        relative;
+
+    border-bottom:
+        1px solid #202020;
+
+}
+
+
+.instructions li::before {
+
+    content:
+        counter(steps);
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        10px;
+
+    width:
+        28px;
+
+    height:
+        28px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    background:
+        var(--yellow);
+
+    color:
+        #000;
+
+    border-radius:
+        50%;
+
+    font-weight:
+        900;
+
+}
+
+
+.exercise-video {
+
+    width:
+        100%;
+
+    border-radius:
+        8px;
+
+}
+
+
+/* =========================
+   LOADING / ERROR
+========================= */
+
+
+.loading {
+
+    color:
+        var(--yellow);
+
+    padding:
+        50px 0;
+
+}
+
+
+.error-box,
+.empty {
+
+    background:
+        var(--black-2);
+
+    border:
+        1px solid #392f00;
+
+    padding:
+        30px;
+
+    border-radius:
+        10px;
+
+}
+
+
+.error-box h3,
+.empty h3 {
+
+    color:
+        var(--yellow);
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.error-box p,
+.empty p {
+
+    color:
+        #888;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        height:
+            65px;
+
+    }
+
+
+    .hero {
+
+        min-height:
+            550px;
+
+        padding:
+            60px 6%;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing:
+            -3px;
+
+    }
+
+
+    main {
+
+        width:
+            90%;
+
+        padding:
+            50px 0;
+
+    }
+
+
+    .tools {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .tools select {
+
+        height:
+            50px;
+
+    }
+
+
+    .detail {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            30px;
+
+    }
+
+
+    .detail-content h1 {
+
+        font-size:
+            45px;
+
+    }
+
+}
